@@ -6,7 +6,10 @@ import { Observable } from 'rxjs';
   selector: 'app-data-view',
   template: `
     <div *ngFor="let item of filteredData$ | async">
-      {{ item.name }} - {{ item.size }}
+      <div>
+      <img [src]="item.image.url" alt="{{ item.name }}" width="170px" [border]="1">
+      </div>
+     <div>Name: {{ item.name }} <br> Origen:{{ item.origin }}</div>
     </div>
   `,
 })
