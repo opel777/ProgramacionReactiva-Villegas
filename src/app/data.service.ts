@@ -25,7 +25,7 @@ export class DataService implements OnDestroy {
     this.subscription = this.http.get<any[]>(this.apiUrl, { headers }).pipe(
       map((data) => {
         console.log(data)
-        // Filtrar datos para obtener solo el nombre y tamaño de cada raza
+        // Filtrar datos para obtener solo el nombre Origen e imagen de cada raza
         return data.map(breed => {
           return {
             image:breed.image,
